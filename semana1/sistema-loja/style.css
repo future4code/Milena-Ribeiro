@@ -1,0 +1,40 @@
+.bio {
+    
+}
+
+.pg {
+    margin: 12px;
+    text-align: center;
+}
+
+.produto {
+    margin: 12px; 
+    text-align: center;
+}
+
+.estoque {
+    margin: 12px;
+    text-align: center;
+}
+
+.func {
+    margin: 12px;
+}
+
+h1 {
+    margin: 20px;
+    text-align: center;
+    color: black;
+}
+.chamada {
+    margin: 12px;
+    text-align: center;
+}
+footer {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+body {
+    background: white;
+}
