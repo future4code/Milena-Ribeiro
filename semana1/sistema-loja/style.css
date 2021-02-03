@@ -36,5 +36,27 @@ footer {
     width: 100%;
 }
 body {
-    background: white;
+    background-color: whitesmoke;
 }
+
+.produtos-disponiveis {
+    text-align: center;
+}
+
+.produtos {
+    text-align: center;
+    margin: 8px;
+    padding: 8px;
+}
+
+.pagamento {
+    text-align: justify;
+
+}
+
+.lista {
+    
+}
+
+    
+
