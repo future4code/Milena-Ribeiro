@@ -1,2 +1,3 @@
 # Aprendizados da semana
-Nessa semana de onboarding da Labenu, aprendi o que é o terminal, quais comandos podem ser utilizados e que eles variam de acordo com o sistema operacional. Também aprendi a diferença entre git e github, que apesar de diferentes em certo nível, eles estão interligados. Na sexta, vi que o Visual Studio Code é um editor de texto, não um IDE. **Importante:** a palavra "aprendi" não deve ser entendida em seu sentido literal.
+
+Nessa semana de onboarding da Labenu, aprendi o que é o terminal e quais comandos podem ser utilizados. Apendi sobre o git e o github, que apesar de diferentes em certo nível, eles estão interligados. Na sexta vi que o Visual Studio Code é um editor de texto que permite fazer algumas formataçãoes, como por o texto em **negrito**.
