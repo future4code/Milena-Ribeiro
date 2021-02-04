@@ -74,10 +74,15 @@ div img {
 #container-de-descricao {
     background-color: #2274a5;
     color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
 }
 
 #container-de-descricao>ol {
     padding: 15px 0px;
+    list-style-position: inside;
 }
 
 #container-para-comprar {
@@ -90,6 +95,7 @@ div img {
     padding: 100px 0;
     font-size: 60px;
 }
+
 
 
 /**
@@ -118,6 +124,7 @@ td button {
 .container-do-search {
     margin-top: 20px;
     height: 100px;
+    
 }
 
 
