@@ -154,5 +154,9 @@ div>a {
 
 tr {
     font-weight:bold;
-    background-color: white;
+
+}
+
+#jeans {
+    background: none;
 }
