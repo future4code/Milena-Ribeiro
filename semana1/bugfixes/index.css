@@ -46,11 +46,13 @@ div img {
     color: white;
     display: block;
     margin:auto;
+
     
 }
 
 .botao-amarelo:hover {
     background-color: #c44f00;
+    
 
 }
 
@@ -87,13 +89,16 @@ div img {
 
 #container-para-comprar {
     background-color: #e7eb90;
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #container-para-comprar>p {
     color: #c44f00;
     padding: 100px 0;
     font-size: 60px;
+    
 }
 
 
@@ -141,4 +146,13 @@ td button {
 
 #back-button:hover {
     background-color: #635a3d
+}
+
+div>a {
+    text-decoration: none;
+}
+
+tr {
+    font-weight:bold;
+    background-color: white;
 }
