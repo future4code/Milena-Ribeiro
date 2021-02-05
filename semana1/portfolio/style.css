@@ -1,0 +1,50 @@
+h1, h2 {
+    text-align: center;
+    margin: 45px;
+    padding: 10px 10px 10px 10px;
+    
+
+}
+
+* {
+    background-color: white;
+}
+
+
+#container-apresentacao>h2 {
+    margin-top: 150px;
+    padding: 0px;
+    
+}
+
+#container-principal>h1 {
+   ;
+    margin: auto;
+    color:black;
+}
+
+#container-educacao>h3 {
+    background-color: white;
+    margin: 25px;
+}
+
+#container-educacao>li {
+    margin: 30px;
+}
+
+#container-experiencia {
+    margin: 20px;
+}
+
+#container-experiencia>li {
+    margin: 5px;
+    line-height: 4.0;
+    color: black;
+}
+
+body {
+    width: 95%;
+    margin: auto;
+    line-height: 1.2;
+}
+
