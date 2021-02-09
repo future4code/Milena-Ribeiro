@@ -5,11 +5,24 @@ body {
     height: 100vh;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 20px;
+    align-items: center;
+}
+
+a:hover {
+    background-color: rgb(171, 236, 171);
+}
+
 header {
     display: flex;
     background-color: sandybrown;
     justify-content: space-between;
-    height: 70px;
+    height: 80px;
     padding: 0 20px;
     align-items: center;
 }
@@ -27,12 +40,14 @@ input {
     column-gap: 20px;
     margin: 30px;  
     text-align: center;
+    box-shadow: 2px 2px 4px green;
 }
 
 footer {
     display: flex;
     background-color: sandybrown;
-    height: 50px;
+    height: 74px;
     align-items: center;
     justify-content:center;
+    
 }
