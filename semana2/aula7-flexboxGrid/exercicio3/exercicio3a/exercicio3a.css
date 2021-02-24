@@ -5,9 +5,16 @@ body {
     margin: 0;
     font-size: 10px;
     color: white;
-    text-align: center;
-    display: flex;
 }
+
+div div {
+    display: flex;
+      justify-content: center;
+      align-items: center;
+      align-self: stretch;
+    color: white;
+    text-align: center;
+}      
 
 #top-container {
     display: flex;
@@ -56,6 +63,7 @@ body {
 .purple-background {
     background-color: purple;
     height: 30px;
+    flex: 1;
 }
 
 #vertical-middle-container {
@@ -66,4 +74,3 @@ body {
     display: flex;
     justify-content: space-between;
 }
-
