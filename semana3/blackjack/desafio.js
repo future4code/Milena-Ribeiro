@@ -23,6 +23,10 @@ let carta2 = comprarCarta();
 let resultado = carta1.valor+carta2.valor
 console.log("Usuário - cartas: ", carta1.texto, " ",carta2.texto, " - ", resultado)
 
+if(carta1.texto === comprarCarta && carta2.texto === comprarCarta){
+   console.log(location.reload)
+}
+
 // if(carta1 === A && carta2 === A){
 //    console.log(location.reload)
 // }
