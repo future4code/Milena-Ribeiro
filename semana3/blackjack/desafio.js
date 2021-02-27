@@ -23,15 +23,22 @@ let carta2 = comprarCarta();
 let resultado = carta1.valor+carta2.valor
 console.log("Usuário - cartas: ", carta1.texto, " ",carta2.texto, " - ", resultado)
 
-if(carta1.texto === comprarCarta && carta2.texto === comprarCarta){
-   console.log(location.reload)
-}
-
-// if(carta1 === A && carta2 === A){
-//    console.log(location.reload)
-// }
-
 let carta3 = comprarCarta();
 let carta4 = comprarCarta();
 let resultadoComputador = carta3.valor+carta4.valor
 console.log("Computador - cartas: ", carta3.texto, " ", carta4.texto, " - ", resultadoComputador)
+
+let aUsuario = 0
+while (!aUsuario) {
+   if(carta1 === A && carta2 === A) aUsuario = 1  
+}
+
+// let carta3 = comprarCarta();
+// let carta4 = comprarCarta();
+// let resultadoComputador = carta3.valor+carta4.valor
+// console.log("Computador - cartas: ", carta3.texto, " ", carta4.texto, " - ", resultadoComputador)
+
+let aComputador = 0
+while (!aComputador) { 
+   if(carta3 === A && carta4 === A) aComputador = 1
+}
