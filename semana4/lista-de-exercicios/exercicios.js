@@ -81,12 +81,31 @@ function retornaExpressoesBooleanas() {
 
 function retornaNNumerosPares(n) {
    // implemente sua lógica aqui
-}
+   const numPares = []
+   for(let i = 0; numPares.length < n; i++) {
+      if(i % 2 === 0) {
+         numPares.push(i)
+      }
+   }
+   return numPares
+} 
+retornaNNumerosPares(3)
 
 // Exercício 8
 
 function checaTriangulo(a, b, c) {
   // implemente sua lógica aqui
+  if(a === b && b === c){
+     return 'Equilátero'
+  } else {
+     if(a === b && b !== c) {
+        return 'Isósceles'
+     } else {
+        if(a !== b && b !== c) {
+           return 'Escaleno'
+        }
+     }
+  }
 }
 
 // Exercício 9
@@ -94,6 +113,7 @@ function checaTriangulo(a, b, c) {
 function comparaDoisNumeros(num1, num2) {
    // implemente sua lógica aqui
 }
+
 
 // Exercício 10
 
