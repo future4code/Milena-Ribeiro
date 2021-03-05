@@ -24,7 +24,14 @@ const resultadoNumerosParesElevado = []
 
 function retornaNumerosPares (array) {
    // implemente sua lógica aqui
-}
+   const entradaNumerosPares = [1, 2, 3, 4, 5, 6];
+   const numerosPares = []
+   for(num of entradaNumerosPares) {
+      if(num % 2 === 0) {
+      numerosPares.push(num)
+      }
+   } return numerosPares
+} 
 
 //Exercício 4
 
