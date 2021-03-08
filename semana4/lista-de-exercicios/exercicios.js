@@ -135,6 +135,7 @@ function segundoMaiorEMenor(array) {
    // implemente sua lógica aqui
 }
 
+
 //Exercício 11
 
 function ordenaArray(array) {
@@ -145,6 +146,13 @@ function ordenaArray(array) {
 
 function filmeFavorito() {
    // implemente sua lógica aqui
+   const filmeFavoritoAstrodev = {
+      nome: 'O Diabo Veste Prada',
+      ano: Number(2006),
+      diretor: 'David Frankel',
+      atores: ['Meryl Streep', 'Anne Hathaway', 'Emily Blunt', 'Stanley Tucci']
+   }
+   return filmeFavoritoAstrodev
 }
 
 // Exercício 13
@@ -157,12 +165,22 @@ function imprimeChamada() {
 
 function criaRetangulo(lado1, lado2) {
    // implemente sua lógica aqui
+   const retangulo = {
+      largura: lado1,
+      altura: lado2,
+      perimetro: 2 * (lado1 + lado2),
+      area: lado1 * lado2
+   }
+   return retangulo
+
 }
 
 // Exercício 15
 
 function anonimizaPessoa(pessoa) {
    // implemente sua lógica aqui
+   pessoa.nome = 'ANÔNIMO'
+   return pessoa
 }
 
 // Exercício 16
@@ -178,12 +196,24 @@ const arrayDePessoas = [
 
 function maioresDe18(arrayDePessoas) {
    // implemente sua lógica aqui
+   const soMaiores = arrayDePessoas.filter((arrayDePessoas) => {
+      if(arrayDePessoas.idade >= 20){
+         return arrayDePessoas.idade >= 20
+      }
+     })
+     return soMaiores
 }
 
 // Exercício 16, letra B
 
 function menoresDe18(arrayDePessoas) {
    // implemente sua lógica aqui
+   const soMenores = arrayDePessoas.filter((arrayDePessoas) => {
+      if(arrayDePessoas.idade < 20){
+         return arrayDePessoas.idade < 20
+      }
+     })
+     return soMenores
 }
 
 // Exercício 17, letra A
