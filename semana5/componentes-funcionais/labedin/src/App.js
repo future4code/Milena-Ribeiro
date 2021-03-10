@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import CardGrande from './components/CardGrande/CardGrande';
 import ImagemButton from './components/ImagemButton/ImagemButton';
+import CardPequeno from './components/CardPequeno.js/CardPequeno'
 import Milena from './components/CardGrande/eu.jpg'
 
 function App() {
@@ -18,6 +19,20 @@ function App() {
         <ImagemButton 
           imagem="https://image.flaticon.com/icons/png/512/117/117472.png" 
           texto="Ver mais"
+        />
+      </div>
+
+      <div className="page-section-container">
+        <CardPequeno
+          imagem="https://img1.gratispng.com/20180412/rxq/kisspng-ipma-email-telephone-message-email-icon-5acf36453ee1e1.3103384815235292852576.jpg"
+          nome="Email:"
+          descricao="milena@hotmail.com"
+        />
+
+        <CardPequeno
+          imagem="https://e7.pngegg.com/pngimages/561/324/png-clipart-location-address-position-linear-icon-location-address.png"
+          nome="Endereço:"
+          descricao="Floria, 34"
         />
       </div>
 
