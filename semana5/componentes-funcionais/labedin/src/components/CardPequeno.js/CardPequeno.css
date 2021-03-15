@@ -1,0 +1,25 @@
+.menor-card {
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    padding: 25px 10px;
+    margin-bottom: 10px;
+    height: 20px;
+    
+}
+
+.menor-card > img {
+    width: 50px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.menor-card h4 {
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+.menor-card > div {
+    display: flex;
+    flex-direction: row;
+}
