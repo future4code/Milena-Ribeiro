@@ -4,12 +4,18 @@ import Etapa2 from "./Components/Etapa2";
 import Etapa3 from "./Components/Etapa3";
 import EtapaFinal from "./Components/EtapaFinal";
 
-export default class App extends React.Component {
+class App extends React.Component {
   state = {
     etapa: 1,
   };
-  render () {
-    const renderizaEtapa = () => {
+
+  irParaProximaEtapa = () => {
+    const paginaEtapa1 = this.state.etapa + 1
+    this.setState({ etapa: paginaEtapa1 })
+  }
+
+  // render () {
+    renderizaEtapa = () => {
       switch (this.state.etapa) {
         case 1:
           return <Etapa1 />;
@@ -20,19 +26,20 @@ export default class App extends React.Component {
         case 4:
           return <EtapaFinal />;
         default:
-          return <div>Página não encontrada</div>;
+          return <Etapa1 />;
     }
   };
-  return (
-    <div>
-        {this.renderizaEtapa()}
-        <button>Próxima etapa</button>
-      </div>
-  )
+  render () {
+    return (
+      <div>
+          {this.renderizaEtapa()}
+          <button onClick={this.irParaProximaEtapa}>Próxima etapa</button>
+        </div>
+    )
   }
 }
   
   
   
 
-// export default App;
+export default App;
