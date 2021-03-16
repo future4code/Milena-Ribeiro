@@ -1,9 +1,10 @@
 import React from "react";
+import styled from 'styled-components';
 
 export default class Etapa1 extends React.Component {
     render() {
         return (
-            <div>
+            <divContainer>
                 <h1>ETAPA 1 - DADOS GERAIS</h1>
                 <h3>1. Qual o seu nome?</h3>
                 <input></input>
@@ -18,7 +19,7 @@ export default class Etapa1 extends React.Component {
                     <option>Ensino superior incompleto</option>
                     <option>Ensino superior completo</option>
                 </select>
-            </div>
+            </divContainer>
         )
     }
 }
