@@ -1,5 +1,18 @@
 import React from 'react';
 import axios from 'axios';
+import styled from 'styled-components';
+
+const DivBorder = styled.div`
+    border: solid 1px;
+    width: 150px;
+    height: 50px;
+    margin-left: 500px;
+    padding: 70px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+`
 
 export default class Register extends React.Component {
     state = {
@@ -34,14 +47,12 @@ export default class Register extends React.Component {
         })
         .catch((err) => {
             alert("Aconteceu um erro deconhecido. Por favor, tente novamente mais tarde.")
-            console.log(err)
         })
      }
 
     render() {
         return (
-            <div>
-                <h2>Cadastro</h2>
+            <DivBorder>
                 <label>
                     Nome:
                     <input onChange={this.handleInputName} value={this.state.inputName} />
@@ -51,7 +62,7 @@ export default class Register extends React.Component {
                     <input onChange={this.handleinputEmail} value={this.state.inputEmail} />
                 </label>
                 <button onClick={this.createUser}>Salvar</button>
-            </div>
+            </DivBorder>
         )
     }
 }

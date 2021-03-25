@@ -1,5 +1,13 @@
-import React from 'react'
+import React from 'react';
 import axios from 'axios';
+import styled from 'styled-components';
+
+const DivPage = styled.div`
+            display: flex;       
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        `
 
 export default class Users extends React.Component {
     state = {
@@ -43,26 +51,19 @@ export default class Users extends React.Component {
         })
     }
 
-    // changePageUsers = () => {
-    //     if (this.state.page === "users") {
-    //       this.setState({ page: "register" })
-    //     }
-    //   }
-
     render() {
         return (
-            <div>
-                <h2>Lista usuários</h2>
+            <DivPage>
+                <h2>Usuários Cadastrados</h2>
                 {this.state.usersList.map((user) => {
                     return (
                         <div key={user.id}>
                             <p>{user.name}</p>
                             <button onClick={() => this.deleteUser(user.id)}>X</button>
-                            {/* <button onClick={this.changePageUsers}>Ir para página de registro</button> */}
                         </div>
                     )
                 })}
-            </div>
+            </DivPage>
         )
     }
 }
