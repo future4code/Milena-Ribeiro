@@ -36,9 +36,10 @@ class PlaylistCriada extends React.Component {
         })
     }
 
-    deletarPlaylist = (id) => {
-        axios.delete(`https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/${playlist.id}`, {
-            hearders: {
+    deletarPlaylist = (playlistId) => {
+        axios.delete
+        (`https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/${playlistId}`, {
+            headers: {
                 Authorization: 'milena-ribeiro-cruz'
             }
         }).then((res) => {
