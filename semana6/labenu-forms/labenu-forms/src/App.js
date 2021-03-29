@@ -1,9 +1,9 @@
 import React from "react";
+
 import Etapa1 from "./Components/Etapa1";
 import Etapa2 from "./Components/Etapa2";
 import Etapa3 from "./Components/Etapa3";
 import EtapaFinal from "./Components/EtapaFinal";
-import styled from 'styled-components';
 
 class App extends React.Component {
   state = {
@@ -41,7 +41,5 @@ class App extends React.Component {
     )
   }
 }
-   
-  
 
 export default App;
