@@ -1,5 +1,22 @@
 import React from 'react';
 import axios from 'axios';
+import styled from 'styled-components';
+
+const DivContainer = styled.div`
+    height: 40vh;
+    width: 40vw;
+    margin: 0 auto;
+    display: flex;
+    border: solid 1px ;           
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    line-height: 10px;
+`
+
+const Input = styled.input`
+    margin-bottom: 10px;
+`
 
 class CriandoPlaylist extends React.Component {
 
@@ -20,11 +37,9 @@ class CriandoPlaylist extends React.Component {
                 Authorization: 'milena-ribeiro-cruz'
             }
         }).then((res) => {
-            // console.log(res)
             alert('Playlist criada com sucesso')
             this.setState({ nomePlaylist:'' })
         }).catch((err) => {
-            // console.log(err)
             alert('Erro')
         })
     };
@@ -32,16 +47,15 @@ class CriandoPlaylist extends React.Component {
 
     render () {
         return (
-            <div>
-                {/* <button>VER PLAYLISTS</button> */}
+            <DivContainer>
                 <h2>Criar Playlist</h2>
                 <h3>Nome Playlist</h3>
-                <input
+                <Input
                 onChange={this.handleNomePlaylist}
                 value={this.state.nomePlaylist}
                 />
                 <button onClick={this.criandoPlaylist}>ENVIAR</button>
-            </div>
+            </DivContainer>
         )
     }
 

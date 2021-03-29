@@ -1,5 +1,17 @@
 import React from 'react';
 import axios from 'axios';
+import styled from 'styled-components';
+
+const DivContainer = styled.div`
+            height: 40vh;
+            width: 40vw;
+            margin: 0 auto;
+            display: flex;
+            border: solid 1px ;           
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        `
 
 class PlaylistCriada extends React.Component {
 
@@ -12,7 +24,11 @@ class PlaylistCriada extends React.Component {
     }
 
     playlistCriada = () => {
-        axios.get('https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists')
+        axios.get('https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists', {
+            headers: {
+                Authorization: 'milena-ribeiro-cruz'
+            }
+        })
         .then((res) => {
             this.setState({ visualizarPlaylist: res.data.result.list })
         }).catch((err) => {
@@ -21,7 +37,7 @@ class PlaylistCriada extends React.Component {
     }
 
     deletarPlaylist = (id) => {
-        axios.del(`https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/:playlist${id}`, {
+        axios.delete(`https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/${playlist.id}`, {
             hearders: {
                 Authorization: 'milena-ribeiro-cruz'
             }
@@ -30,24 +46,30 @@ class PlaylistCriada extends React.Component {
             this.playlistCriada()
         }).catch((err) => {
             alert('Erro ao apagar playlist')
+            console.log(err)
         })
     }
 
-    render () {
+    render() {
         const mapPlaylist = this.state.visualizarPlaylist.map((playlist) => {
             return (
                 <div key={playlist.id}>
-                <p>{playlist.name}</p>
-                <button>VOLTAR PARA HOME</button>
+                    <p>{playlist.name}</p>
+                    <button onClick={() => this.deletarPlaylist(playlist.id)}>Deletar</button>
                 </div>
-        )
-    })
+            )
+        })
         return (
-            <div>
+            <DivContainer>
                 <h2>Playlists</h2>
-                {mapPlaylist}
-            </div>
+                {this.state.visualizarPlaylist.length > 0 ? (            
+                    <ul>{mapPlaylist}</ul>
+                ) : (
+                <p>Carregando...</p>
+                 )}
+            </DivContainer>
         )
     }
+
 }
 export default PlaylistCriada
