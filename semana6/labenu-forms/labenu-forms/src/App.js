@@ -1,9 +1,9 @@
 import React from "react";
+
 import Etapa1 from "./Components/Etapa1";
 import Etapa2 from "./Components/Etapa2";
 import Etapa3 from "./Components/Etapa3";
 import EtapaFinal from "./Components/EtapaFinal";
-
 
 class App extends React.Component {
   state = {
@@ -34,13 +34,12 @@ class App extends React.Component {
     return (
       <div>
           {this.renderizaEtapa()}
-          <button onClick={this.irParaProximaEtapa}>Próxima etapa</button>
-        </div>
+          {this.state.etapa !== 4 && (
+            <button onClick={this.irParaProximaEtapa}>Próxima etapa</button>
+          )}
+      </div>
     )
   }
 }
-  
-  
-  
 
 export default App;
