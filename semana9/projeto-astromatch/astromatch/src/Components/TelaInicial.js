@@ -37,15 +37,14 @@ const TelaInicial = () => {
         .catch((err) => console.log(err))
     }
 
-
-const botaoTela = () => {
-    if (tela === "TelaInicial"){
-        return <button onClick={mudaTela}>Ir para Matches</button>
-    } else {
-        return <button onClick={mudaTela}>Visualizar perfis</button>
-    }
-}    
-
+    const botaoTela = () => {
+        if (tela === "TelaInicial"){
+            return <button onClick={mudaTela}>Ir para Matches</button>
+        } else {
+            return <button onClick={mudaTela}>Visualizar perfis</button>
+        }
+    }    
+    
     const mudaTela = () => {
         if(tela === "TelaInicial"){
             setTela("Matches")
@@ -53,34 +52,35 @@ const botaoTela = () => {
             setTela("TelaInicial")
         }
     }
-const renderTela = () => {
-    switch (tela) {
-        case "TelaInicial":
-            return (
-                <div>
-                    <h1>Astromatch</h1>
-                    <img width='350' height='400' src={perfil.photo}/>
-                    <p>{perfil.name}, {perfil.age}</p>
-                    <p>{perfil.bio}</p>
-                    <button onClick={pegaMatch}>s2</button>
-                    <button onClick={pegaPerfil}>X</button>
-                </div>
-            )
-        case "Matches":
-            return (
-                <Matches />
-            )
-        default:
+    const renderTela = () => {
+        switch (tela) {
+            case "TelaInicial":
+                return (
+                    <div>
+                        <h1>Astromatch</h1>
+                        
+                        <img width='350' height='400' src={perfil.photo}/>
+                        <p>{perfil.name}, {perfil.age}</p>
+                        <p>{perfil.bio}</p>
+                        <button onClick={pegaMatch}>s2</button>
+                        <button onClick={pegaPerfil}>X</button>
+                    </div>
+                )
+            case "Matches":
+                return (
+                    <Matches />
+                )
+            default:
             <div></div>
+        }   
     }
-}
 
-return (
-    <div>
-        <div>{botaoTela()}</div>
-        {renderTela()}
-    </div>
-)
+    return (
+        <div>
+            <div>{botaoTela()}</div>
+            {renderTela()}
+        </div>
+    )
     
 // return (
 //     <div>

@@ -5,44 +5,42 @@ const Matches = () => {
     const [matches, setMatches] = useState([])
 
     useEffect(() => {
-        macthesDados()
+        matchesDados()
     }, [])
 
-    const macthesDados = () => {
+    const matchesDados = () => {
         axios.get("https://us-central1-missao-newton.cloudfunctions.net/astroMatch/milena-cruz/matches")
         .then(res => {
             setMatches(res.data.matches)
-            console.log(res.data.profile)
+            // console.log(res.data.matches)
+        }).catch(err => {
+            // console.log(err)
+        })
+    }
+
+    const deletarTudo = () => {
+        axios.put("https://us-central1-missao-newton.cloudfunctions.net/astroMatch/milena-cruz/clear")
+        .then(res => {
+            matchesDados()
+            console.log(res)
         }).catch(err => {
             console.log(err)
         })
     }
 
-    // render() 
-    // {
-    //     const mapMatches = setMatches.map ((match) => {
-    //         return (
-    //             <div>
-    //                 <p>{match.name}</p>
-    //             </div>
-    //         );
-    //     });
-    // }
-
     return (
-        <div key={matches.id}>
-        {matches.map((match) => {
-            return (
-                <div>
-                    <img width='150' height='200' src={match.photo}/>, <p>{match.name}</p>
-                </div>
-            );
-        })}
+        <div >
+            <button onClick={() => deletarTudo()}>Limpar Tudo</button>
+            {matches.map((match) => {
+                return (
+                    <div key={match.id}>
+                        
+                        <img width='100' height='100' src={match.photo}/> <p>{match.name}</p>
+                    </div>
+                );
+            })}
         </div>
-        // <div>
-        //     <h3>Tela de Matches</h3>
-        //     {mapMatches}
-        // </div>
+
     )
 }
 
