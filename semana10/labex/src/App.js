@@ -1,12 +1,12 @@
-import logo from './logo.svg';
+import React from "react";
 import './App.css';
+import Router from './routes/Router'
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-        <p>
-          LabeX
-        </p>
+        <p>LabeX</p>
+          <Router />
     </div>
   );
 }
