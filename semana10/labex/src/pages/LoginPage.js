@@ -5,7 +5,7 @@ import axios from 'axios';
 
 const LoginPage = () => {
     const history = useHistory()
-    const [email, setEmail] = useState("")
+    const [email, setEmail] = useState("") //useInput
     const [password, setPassword] = useState("")
 
     const handleEmail = (event) => {
@@ -35,7 +35,7 @@ const LoginPage = () => {
         <div>
             <h2>LoginPage</h2>
             <input value={email} onChange={handleEmail} placeholder="E-mail"></input>
-            <input value={password} onChange={handlePassword} placeholder="Senha"></input>
+            <input value={password} onChange={handlePassword} type="password" placeholder="Senha"></input>
             <button onClick={login}>Entrar</button>
             <button onClick={() => goToHomePage(history)}>Voltar</button>
         </div>
