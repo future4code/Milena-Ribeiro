@@ -10,7 +10,8 @@ const initialForm = {
     planet: "",
     date: "",
     description: "",
-    durationInDays: ""
+    durationInDays: "",
+    // select: ""
   };
 
 const CreateTripPage = () => {
@@ -19,13 +20,15 @@ const CreateTripPage = () => {
 
     const handleClick = (event) => {
         event.preventDefault();
+        createTrip();
         console.log(form);
         resetForm();
     };
 
     const createTrip = () => {
         const token = window.localStorage.getItem("token")
-        axios.post("https://us-central1-labenu-apis.cloudfunctions.net/labeX/milena-ribeiro-cruz/trips", initialForm, {
+        console.log(initialForm)
+        axios.post("https://us-central1-labenu-apis.cloudfunctions.net/labeX/milena-ribeiro-cruz/trips", form, {
             headers: {
                 auth: token
             }
@@ -50,17 +53,17 @@ const CreateTripPage = () => {
             value={form.name}
             onChange={onChange}
             />
-            <select>
-                <option>Escolha um planeta</option>
-                <option>Mercúrio</option>
-                <option>Terra</option>
-                <option>Netuno</option>
-                <option>Júpiter</option>
-                <option>Urano</option>
-                <option>Saturno</option>
-                <option>Vênus</option>
-                <option>Marte</option>
-                <option>Plutão</option>
+            <select value={form.planet} onChange={onChange} name="planet" type="text">
+                <option value="">Escolha um planeta</option>
+                <option value="Mercúrio">Mercúrio</option>
+                <option value="Terra">Terra</option>
+                <option value="Netuno">Netuno</option>
+                <option value="Júpiter">Júpiter</option>
+                <option value="Urano">Urano</option>
+                <option value="Saturno">Saturno</option>
+                <option value="Vênus">Vênus</option>
+                <option value="Marte">Marte</option>
+                <option value="Plutão">Plutão</option>
             </select>
             <input 
             type="date" 

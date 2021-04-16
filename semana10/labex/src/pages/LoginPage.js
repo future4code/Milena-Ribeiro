@@ -5,7 +5,7 @@ import axios from 'axios';
 
 const LoginPage = () => {
     const history = useHistory()
-    const [email, setEmail] = useState("") //useInput
+    const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
 
     const handleEmail = (event) => {
@@ -24,7 +24,7 @@ const LoginPage = () => {
         axios.post("https://us-central1-labenu-apis.cloudfunctions.net/labeX/milena-ribeiro-cruz/login", body )
             .then((res) => {
                 window.localStorage.setItem("token", res.data.token)
-                console.log(res.data)
+                // console.log(res.data)
                 history.push("/admin/trips/list")
         }).catch((err) => {
             alert("Insira um login válido.")

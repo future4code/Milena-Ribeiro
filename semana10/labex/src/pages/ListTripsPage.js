@@ -21,13 +21,12 @@ const ListTripsPage = () => {
         })
     }
 
-
     return(
         <div>
             <h1>Lista de viagens</h1>
             {listTrips.map((trip) => {
                 return (
-                    <div>
+                    <div key={trip.name}>
                         <h3>Nome: {trip.name}</h3>
                         <h3>Descrição: {trip.description}</h3>
                         <h3>Planeta: {trip.planet}</h3>

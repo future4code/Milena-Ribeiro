@@ -36,6 +36,9 @@ const AdminHomePage = () => {
         })
     }
 
+    const goToDetailPage = (id) => {
+        history.push(`/admin/trips/${id}`);
+    };
     // const logout = () => {
     //     window.localStorage.removeItem("token");
     //     history.push("/login");
@@ -51,7 +54,7 @@ const AdminHomePage = () => {
             {listTrips.map((trip) => {
                 return (
                     <div key={trip.name}>
-                        <h3>{trip.name}</h3>
+                        <button onClick={() => goToDetailPage(trip.name)}>{trip.name}</button>
                         <button onClick={() => deleteTrip(trip.id)}>Excluir</button>
                         <hr></hr>
                     </div>
