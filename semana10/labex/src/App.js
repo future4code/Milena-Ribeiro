@@ -10,7 +10,7 @@ import styled from 'styled-components'
 const App = () => {
   return (
     <div className="App">
-        <h1>LabeX</h1>
+        {/* <h1>LabeX</h1> */}
           <Router />
     </div>
   );

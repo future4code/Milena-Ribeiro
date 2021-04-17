@@ -5,19 +5,16 @@ import axios from 'axios';
 import {useForm} from '../hook/useForm';
 
 const useInput = (initialValue) => {
-    const [value, setValue] = useState(initialValue);
-  
+    const [value, setValue] = useState(initialValue);  
     const onChangeValue = (event) => {
       setValue(event.target.value);
-    };
-  
+    }; 
     return [value, onChangeValue];
 };
   
 const makePostRequest = (body) => {
     console.log("BODY: ", body);
 };
-
 const ApplicationFomPage = () => {
     const history = useHistory()
     // const [trip, onChangeTrip] = useInput("");
@@ -37,12 +34,9 @@ const ApplicationFomPage = () => {
         axios.get("https://us-central1-labenu-apis.cloudfunctions.net/labeX/milena-ribeiro-cruz/trips")
         .then(res => {
             setTripList(res.data.trips)
-            // console.log(res.data.trips)
         }).catch(err => {
-            // console.log(err)
         })
-    }
-  
+    } 
     const onSubmitForm = (event) => {
         event.preventDefault();
         const body = {
@@ -56,7 +50,6 @@ const ApplicationFomPage = () => {
         makePostRequest(body);
         resetForm()
       };
-
     return (
         <div>
             <p>Para o usuário se candidatar à viagens, página que vai ter o formulário de inscrição</p>
@@ -85,12 +78,3 @@ const ApplicationFomPage = () => {
     )
 }
 export default ApplicationFomPage;
-
-
-// import Select from '../Country/SelectCountry'
-
-// function CountrySelector() {
-//   return <Select options={options} value={value} onChange={changeHandler} />
-// }
-
-// export default CountrySelector
