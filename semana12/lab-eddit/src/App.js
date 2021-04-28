@@ -1,9 +1,9 @@
 import './App.css';
 import React, { useState } from 'react';
-import FeedPage from './pages/FeedPage/FeedPage';
-import LoginPage from './pages/LoginPage/LoginPage';
-import PostPage from './pages/PostPage/PostPage';
-import SignUpPage from './pages/SignUpPage/SignUpPage';
+// import FeedPage from './pages/FeedPage/FeedPage';
+// import LoginPage from './pages/LoginPage/LoginPage';
+// import PostPage from './pages/PostPage/PostPage';
+// import SignUpPage from './pages/SignUpPage/SignUpPage';
 import Router from './routes/Router';
 import theme from './constants/theme';
 import { ThemeProvider } from '@material-ui/core/styles';
