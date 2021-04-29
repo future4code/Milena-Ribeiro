@@ -59,4 +59,4 @@ const FeedCard = (props) => {
   )
 }
 
-export default FeedCard
+export default FeedCard 

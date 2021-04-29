@@ -3,7 +3,7 @@ import AppBar from '@material-ui/core/AppBar';
 // import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import { StyledToolbar } from './styled';
-import { goToLogin, goToPost } from '../../routes/coordinator';
+import { goToLogin, goToFeed } from '../../routes/coordinator';
 import { useHistory } from 'react-router-dom'
 
 const Header = ({buttonRight, setButtonRight}) => {
@@ -27,7 +27,7 @@ const Header = ({buttonRight, setButtonRight}) => {
   return (
       <AppBar position="static">
         <StyledToolbar>
-          <Button onClick={() => goToPost(history)} color="inherit">LabEddit</Button>
+          <Button onClick={() => goToFeed(history)} color="inherit">LabEddit</Button>
           <Button onClick={buttonRightAction} color="inherit">{buttonRight}</Button>
         </StyledToolbar>
       </AppBar>
