@@ -26,7 +26,6 @@ const LoginForm = ({setButtonRight}) => {
                     variant={"outlined"}
                     required
                     type={"email"}
-                        // margin={"normal"}
                     fullWidth
                 />
                 <TextField 

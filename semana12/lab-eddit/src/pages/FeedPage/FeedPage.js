@@ -6,6 +6,7 @@ import { FeedContainer } from './styled'
 import FeedCard from "../../components/FeedCard/FeedCard"
 import { goToPost } from '../../routes/coordinator'
 import { useHistory } from 'react-router-dom'
+import CreatePostForm from './CreatePostForm'
 
 const FeedPage = () => {
     useProtectedPage()
@@ -19,12 +20,6 @@ const FeedPage = () => {
     
     const feedList = feed && feed.posts && feed.posts.map((post) => {
         return (
-            // <div>
-            //     <p>{post.username}</p>
-            //     <p>{post.text}</p>                
-            //     <p>{post.votesCount}</p>
-            //     <p>{post.commentsCount}</p>
-            // </div>
             <FeedCard
                 key={post.id}
                 username={post.username}
@@ -39,6 +34,7 @@ const FeedPage = () => {
 
     return (
         <FeedContainer>
+            <CreatePostForm/>
             {feedList}
         </FeedContainer>
     )

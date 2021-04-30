@@ -9,7 +9,7 @@ export const ScreenContainer = styled.div`
     padding: 15px;
 `
 
-export const PostContainer = styled.div`
+export const CommentContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin: 30px;

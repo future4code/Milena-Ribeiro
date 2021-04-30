@@ -19,7 +19,7 @@ export const FeedCardContent = styled(CardContent)`
   padding: 30px;
 `
 
-// export const CardActions = styled(CardActions)`
+// export const CardActions = styled(Card)`
 //     display: flex;
 //     flex-direction: space-between;
 // `
