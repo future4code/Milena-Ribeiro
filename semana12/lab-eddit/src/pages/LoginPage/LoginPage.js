@@ -1,11 +1,10 @@
-import React from 'react';
-import Button from '@material-ui/core/Button';
-import { ScreenContainer, SignUpContainer } from './styled';
-import LoginForm from './LoginForm';
-import { useHistory } from 'react-router-dom';
-import { goToSignUp } from '../../routes/coordinator';
+import React from 'react'
+import Button from '@material-ui/core/Button'
+import { ScreenContainer, SignUpContainer } from './styled'
+import LoginForm from './LoginForm'
+import { useHistory } from 'react-router-dom'
+import { goToSignUp } from '../../routes/coordinator'
 import useUnProtectedPage from '../../hooks/useUnProtectedPage'
-
 
 const LoginPage = ({setButtonRight}) => {
     useUnProtectedPage()

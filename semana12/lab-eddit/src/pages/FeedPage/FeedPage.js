@@ -3,7 +3,7 @@ import useProtectedPage from '../../hooks/useProtectedPage'
 import useRequestData from '../../hooks/useRequestData'
 import { BASE_URL } from '../../constants/urls'
 import { FeedContainer } from './styled'
-import FeedCard from "../../components/FeedCard/FeedCard"
+import FeedCard from '../../components/FeedCard/FeedCard'
 import { goToPost } from '../../routes/coordinator'
 import { useHistory } from 'react-router-dom'
 import CreatePostForm from './CreatePostForm'
@@ -31,7 +31,6 @@ const FeedPage = () => {
             />
         )
     })
-
     return (
         <FeedContainer>
             <CreatePostForm/>

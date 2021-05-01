@@ -28,7 +28,6 @@ const SignUpForm = ({setButtonRight}) => {
                         required
                         type={"text"}
                         margin={"normal"}
-                        // autoFocus
                         fullWidth
                     />
                     <TextField 

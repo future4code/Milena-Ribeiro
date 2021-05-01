@@ -1,9 +1,9 @@
-import React from 'react';
-import Button from '@material-ui/core/Button';
-import { InputsContainer } from './styled';
-import TextField from '@material-ui/core/TextField';
-import useForm from '../../hooks/useForm';
-import { login } from '../../services/user';
+import React from 'react'
+import Button from '@material-ui/core/Button'
+import { InputsContainer } from './styled'
+import TextField from '@material-ui/core/TextField'
+import useForm from '../../hooks/useForm'
+import { login } from '../../services/user'
 import { useHistory } from 'react-router-dom'
 
 const LoginForm = ({setButtonRight}) => {

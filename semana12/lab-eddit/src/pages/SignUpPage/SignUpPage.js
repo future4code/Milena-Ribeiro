@@ -1,7 +1,7 @@
 import React from 'react';
 import { ScreenContainer } from './styled';
 import SignUpForm from './SignUpForm';
-import useUnProtectedPage from '../../hooks/useUnProtectedPage'
+import useUnProtectedPage from '../../hooks/useUnProtectedPage';
 
 const SignUpPage = ({setButtonRight}) => {
     useUnProtectedPage()

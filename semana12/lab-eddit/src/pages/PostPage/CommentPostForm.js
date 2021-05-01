@@ -1,13 +1,12 @@
-import React from 'react';
-import Button from '@material-ui/core/Button';
-import { CommentContainer } from './styled';
-import TextField from '@material-ui/core/TextField';
-import useForm from '../../hooks/useForm';
-import { createComment } from '../../services/user';
+import React from 'react'
+import Button from '@material-ui/core/Button'
+import { CommentContainer } from './styled'
+import TextField from '@material-ui/core/TextField'
+import useForm from '../../hooks/useForm'
 import { useHistory } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
-import { BASE_URL } from '../../constants/urls';
+import { BASE_URL } from '../../constants/urls'
 
 const CommentPostForm = () => {
     const [form, onChange, clear] = useForm({text: ""})

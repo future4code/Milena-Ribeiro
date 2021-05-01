@@ -1,7 +1,6 @@
-import axios from 'axios';
-import { BASE_URL } from '../constants/urls';
+import axios from 'axios'
+import { BASE_URL } from '../constants/urls'
 import { goToFeed } from '../routes/coordinator'
-import { useParams } from 'react-router-dom'
 
 export const login = (form, clear, history, setButtonRight) => {
     axios.post(`${BASE_URL}/login`, form)

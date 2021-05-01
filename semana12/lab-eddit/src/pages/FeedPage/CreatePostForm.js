@@ -1,10 +1,10 @@
-import React from 'react';
-import Button from '@material-ui/core/Button';
-import TextField from '@material-ui/core/TextField';
-import useForm from '../../hooks/useForm';
+import React from 'react'
+import Button from '@material-ui/core/Button'
+import TextField from '@material-ui/core/TextField'
+import useForm from '../../hooks/useForm'
 import { useHistory } from 'react-router-dom'
 import axios from 'axios'
-import { BASE_URL } from '../../constants/urls';
+import { BASE_URL } from '../../constants/urls'
 import { InputsContainer } from './styled'
 
 const CreatePostForm = () => {
