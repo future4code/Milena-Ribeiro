@@ -59,3 +59,13 @@ VALUES(
   "1979-03-26", 
   "female"
 );
+
+EXERCÍCIO 3
+
+a) SELECT id, name, salary, birth_date, gender FROM Actor WHERE gender = "female"
+b) SELECT salary FROM Actor WHERE name = "Tony Ramos"
+c) SELECT * FROM Actor WHERE gender = "invalid" . 0 row(s) returned/0 linhas retornadas. Não há dados com o gênero "invalid", todos estão preenchidos com male ou female. A tabela retornou com os campos null.
+d) SELECT id, name, salary FROM Actor WHERE salary <= 500000
+e) Error Code: 1054. Unknown column 'nome' in 'field list' / Código de erro: 1054. Coluna desconhecida 'nome' na 'lista de campos'. A informação passada no select é diferente da que foi passada na coluna. O correto seria "name", não "nome".
+
+
