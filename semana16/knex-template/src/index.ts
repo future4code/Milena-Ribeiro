@@ -1,7 +1,7 @@
 import app from './app'
-import express, { Request, Response } from "express"
 import knex from 'knex'
 import {connection} from './connection'
+import express, {Request, Response} from 'express'
 
 const getActorById = async (id: string): Promise<any> => {
     const result = await connection.raw(`
