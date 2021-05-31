@@ -15,8 +15,6 @@ let users: User[] = []
 app.get("/user/:id", ((req: Request, res: Response) => {
     try {
         const id = req.params.id
-        // console.log(id)
-        // res.status(200).send(result)
         if (!id) {
             throw new Error ("Usuário não encontrado!") 
         }
@@ -29,20 +27,6 @@ app.get("/user/:id", ((req: Request, res: Response) => {
         res.send({message: error.message})
     }
 }),
-
-// app.put("/user", (req: Request, res: Response) => {
-//     try {
-//         const newUser: User = {
-//             name: req.body.name,
-//             nickname: req.body.nickname,
-//             email:  req.body.email
-//         }
-//         users.push(newUser)
-//         res.status(200).send("Usuário criado!")
-//     } catch (error) {
-//         res.status(400).send({message: error.message})
-//     }
-// })
 
 app.put("/user", (req: Request, res: Response) => {
     try {
