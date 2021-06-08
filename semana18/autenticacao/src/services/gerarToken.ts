@@ -1,21 +1,21 @@
 import * as jwt from "jsonwebtoken";
 
-const expiresIn = "1min"
+export type AuthenticationData = {id: string}
 
-const generateToken = (input: AuthenticationData): string => {
-  const token = jwt.sign(
-    {
-      id: input.id
-    },
+export function gerarToken(payload: AuthenticationData): string {
+  return jwt.sign(
+    payload,
     process.env.JWT_KEY as string,
-    {
-      expiresIn
-    }
-  );
-  return token;
-}
-type AuthenticationData = {
-    id: string;
+  {
+    expiresIn: "1m"
+  })
 }
 
-export default generateToken
+export function getTokenData(token: string): AuthenticationData {
+  const result: AuthenticationData = jwt.verify(
+    token,
+    process.env.JWT_KEY as string
+  ) as AuthenticationData
+
+    return result
+}
