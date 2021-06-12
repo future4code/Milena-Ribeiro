@@ -11,6 +11,6 @@ export const createHash = (
 export const compareHash = (
    plaintText:string,
    cypherText:string
-):boolean=>{
+): boolean => {
    return compareSync(plaintText, cypherText)
 }

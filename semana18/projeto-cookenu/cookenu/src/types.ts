@@ -8,6 +8,11 @@ export type user = {
    email: string
    password: string
    name: string
-   // nickname: string
    // role: USER_ROLES
+}
+
+export type recipe = {
+   id: string
+   title: string
+   description: string
 }

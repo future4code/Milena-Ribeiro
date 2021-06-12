@@ -1,12 +1,10 @@
 import * as jwt from "jsonwebtoken";
 import { config } from "dotenv"
-// import { USER_ROLES } from "../types";
 
 config()
 
 export type authenticationData = {
    id: string
-   // role: USER_ROLES
 };
 
 export function generateToken(payload: authenticationData): string {
@@ -27,4 +25,11 @@ export function getTokenData(token: string): authenticationData {
    ) as authenticationData;
 
    return result;
+}
+
+export const getData = (token: string): authenticationData => {
+  const {id} = jwt.verify(token, process.env.JWT_KEY as string) as any
+  return {
+    id
+  }
 }
