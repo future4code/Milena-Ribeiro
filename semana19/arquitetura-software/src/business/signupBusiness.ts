@@ -1,34 +1,35 @@
-import { hash } from '../services/hashManager'
-import * as signupBusiness from '../business/signupBusiness'
-import { generateToken } from '../services/authenticator'
-import { generateId } from '../services/idGenerator'
-import {userData} from '../model/user'
-// import {createUser} from '../data/signupData'
+import { hash } from "../services/hashManager";
+import { insertUser } from "../data/insertUser";
+import { userData } from "../model/user";
+import { generateToken } from "../services/authenticator";
+import { generateId } from "../services/idGenerator";
 
-export const createUser = async (userData: userData) => {
-    
-    try{
+export const signupBusiness = async (
+   userData: userData
+):Promise<string> => {
+   if (
+      !userData.name ||
+      !userData.email ||
+      !userData.password ||
+      !userData.role
+   ) {
+      throw new Error('Preencha os campos "name", "email" e "password"')
+   }
 
-        if(!userData.name || !userData.email || !userData.password || !userData.role){
-            throw new Error("Please fill all the fields");
-        }
+   const cypherPassword = await hash(userData.password);
 
-        if(userData.email.indexOf("@") === -1){
-            throw new Error("Invalid Email");
-        }
+   const newUser = {
+      ...userData,
+      password: cypherPassword,
+      id: generateId()
+   }
 
-        if(userData.password.length < 6){
-            throw new Error("Password must have at least 6 characters");
-        }
+   await insertUser(newUser)
 
-        const id = generateId();
-        const hashPassword = await hash(userData.password);
-        await signupBusiness.createUser(id, userData.email, userData.name, hashPassword, userData.role);
-        const token = generateToken({id, role: userData.role});
-        
-        return token;
+   const token: string = generateToken({
+      id: newUser.id,
+      role: userData.role
+   })
 
-    } catch(error) {
-        throw new Error( error.message || "Error creating user. Please check your system administrator.");
-    }
+   return token
 }

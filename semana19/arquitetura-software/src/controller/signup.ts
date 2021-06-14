@@ -1,22 +1,25 @@
-import { Request, Response } from 'express'
-import * as signupBusiness from '../business/signupBusiness'
+import { Request, Response } from "express"
+import { signupBusiness } from "../business/signupBusiness"
 
-export const signup = async (req: Request, res: Response) => {
+export const signup = async (
+    req: Request,
+    res: Response
+) => {
     try {
-        const input = {
-            email: req.body.email,
-            name: req.body.name,
-            password: req.body.password,
-            role: req.body.role
-        }
+        const { name, email, password, role } = req.body
 
-        const token = await signupBusiness.createUser(input);
+        const token: string = await signupBusiness({
+            name, email, password, role
+        })
 
-        res.status(200).send({ token });
+        res
+            .status(201)
+            .send({
+                message: "Usuário criado!",
+                token
+            })
 
     } catch (error) {
-        res.status(400).send({ error: error.message });
+        res.status(400).send(error.message)
     }
-
-    // await destroyConnection();
 }
