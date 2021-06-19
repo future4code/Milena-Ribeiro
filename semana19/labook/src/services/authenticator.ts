@@ -1,18 +1,22 @@
 import * as jwt from "jsonwebtoken"
+import {config} from 'dotenv'
+import { authenticationData } from '../model/user'
 
-function generateToken(
+config()
+
+export function generateToken(
    payload: authenticationData
 ): string {
    return jwt.sign(
       payload,
       process.env.JWT_KEY as string,
       {
-         expiresIn: process.env.JWT_EXPIRES_IN
+         expiresIn: process.env.JWT_EXPIRES_IN 
       }
    )
 }
 
-function getTokenData(
+export function getTokenData(
    token: string
 ): authenticationData {
    const result: any = jwt.verify(
